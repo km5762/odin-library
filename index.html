@@ -43,5 +43,40 @@
         d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
       />
     </svg>
+    <div class="modal">
+      <div class="form-container">
+        <h2>Add a book</h2>
+        <form>
+          <ul>
+            <li>
+              <label for="title-input">Title</label>
+              <input type="text" name="title" id="title-input" />
+            </li>
+            <li>
+              <label for="author-input">Author</label>
+              <input type="text" name="author" id="author-input" />
+            </li>
+            <li>
+              <label for="pages-input">Pages</label>
+              <input type="text" name="pages" id="pages-input" />
+            </li>
+            <li>
+              <fieldset>
+                <legend>Read?</legend>
+                <div>
+                  <label for="yes-input">Yes</label>
+                  <input type="radio" id="yes-input" name="read" value="yes" />
+                </div>
+                <div>
+                  <label for="no-input">No</label>
+                  <input type="radio" id="no-input" name="read" value="no" />
+                </div>
+              </fieldset>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
+<script src="scripts.js"></script>

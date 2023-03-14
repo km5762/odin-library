@@ -18,3 +18,10 @@ function displayLibrary(library) {
     const bookCard = document.createElement("div");
   });
 }
+
+const addBook = document.querySelector(".add-book");
+const modal = document.querySelector(".modal");
+
+addBook.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
