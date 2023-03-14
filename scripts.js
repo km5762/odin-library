@@ -21,7 +21,12 @@ function displayLibrary(library) {
 
 const addBook = document.querySelector(".add-book");
 const modal = document.querySelector(".modal");
+const close = document.querySelector(".close-modal");
 
 addBook.addEventListener("click", () => {
   modal.style.display = "flex";
+});
+
+close.addEventListener("click", () => {
+  modal.style.display = "none";
 });
