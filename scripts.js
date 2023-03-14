@@ -1,3 +1,13 @@
-for (let i = 0; i < 10; i++) {
-  let x = 10;
+const myLibrary = [];
+
+function Book(author, title, pages, read) {
+  this.author = author;
+  this.title = title;
+  this.pages = pages;
+  this.read = read;
+}
+
+function addBookToLibrary(author, title, pages, read) {
+  const book = new Book(author, title, pages, read);
+  myLibrary.push(book);
 }
