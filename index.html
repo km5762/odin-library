@@ -22,12 +22,12 @@
     <div class="cards">
       <template id="card-template">
         <div class="card">
-          <p>Author:</p>
-          <p>Title:</p>
-          <p>Pages:</p>
+          <p class="card-title">Title:</p>
+          <p class="card-author">Author:</p>
+          <p class="card-pages">Pages:</p>
           <div class="read">
             <span>Read?</span>
-            <input type="checkbox" />
+            <input class="card-read" type="checkbox" />
           </div>
         </div>
       </template>
@@ -74,17 +74,10 @@
               <input type="text" name="pages" id="pages-input" />
             </li>
             <li>
-              <fieldset>
-                <legend>Read?</legend>
-                <div>
-                  <label for="yes-input">Yes</label>
-                  <input type="radio" id="yes-input" name="read" value="yes" />
-                </div>
-                <div>
-                  <label for="no-input">No</label>
-                  <input type="radio" id="no-input" name="read" value="no" />
-                </div>
-              </fieldset>
+              <div class="checkbox-container">
+                <label for="read-input">Read?</label>
+                <input type="checkbox" name="read" id="read-input" />
+              </div>
             </li>
             <li>
               <input type="submit" value="Add Book" id="submit-button" />

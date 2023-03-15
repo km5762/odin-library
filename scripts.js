@@ -1,4 +1,18 @@
-const myLibrary = [];
+function Library() {
+  this.books = [];
+}
+
+Library.prototype.addBook = function addBook(book) {
+  this.books.push(book);
+};
+
+const library = new Library();
+const addBook = document.querySelector(".add-book");
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".close-modal");
+const form = document.querySelector("form");
+const template = document.querySelector("template");
+const cards = document.querySelector(".cards");
 
 function Book(author, title, pages, read) {
   this.author = author;
@@ -7,21 +21,19 @@ function Book(author, title, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary(author, title, pages, read) {
-  const book = new Book(author, title, pages, read);
-  myLibrary.push(book);
-}
+function addBookToDisplay(book) {
+  const card = template.content.cloneNode(true);
+  const tempTitle = card.querySelector(".card-title");
+  const tempAuthor = card.querySelector(".card-author");
+  const tempPages = card.querySelector(".card-pages");
+  const tempRead = card.querySelector(".card-read");
 
-function displayLibrary(library) {
-  const cards = document.querySelector(".cards");
-  library.forEach((book) => {
-    const bookCard = document.createElement("div");
-  });
+  tempTitle.textContent += book.title;
+  tempAuthor.textContent += book.author;
+  tempPages.textContent += book.pages;
+  tempRead.checked = book.read;
+  cards.appendChild(card);
 }
-
-const addBook = document.querySelector(".add-book");
-const modal = document.querySelector(".modal");
-const close = document.querySelector(".close-modal");
 
 addBook.addEventListener("click", () => {
   modal.style.display = "flex";
@@ -29,4 +41,18 @@ addBook.addEventListener("click", () => {
 
 close.addEventListener("click", () => {
   modal.style.display = "none";
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const book = new Book(
+    form.author.value,
+    form.title.value,
+    form.pages.value,
+    form.read.checked
+  );
+  form.reset();
+  modal.style.display = "none";
+  addBookToDisplay(book);
+  library.addBook(book);
 });

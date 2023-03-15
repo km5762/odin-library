@@ -78,11 +78,6 @@ ul {
   gap: 1rem;
 }
 
-fieldset {
-  display: flex;
-  gap: 3.1rem;
-}
-
 h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -101,8 +96,9 @@ h2 {
   color: red;
 }
 
-legend {
-  margin-bottom: 0.7rem;
+.checkbox-container {
+  display: flex;
+  gap: 1.5rem;
 }
 
 #submit-button {
