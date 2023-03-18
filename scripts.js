@@ -56,3 +56,10 @@ form.addEventListener("submit", (e) => {
   addBookToDisplay(book);
   library.addBook(book);
 });
+
+cards.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (e.target.classList.contains("remove-book")) {
+    e.target.parentElement.remove();
+  }
+});
