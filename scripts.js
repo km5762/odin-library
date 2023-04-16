@@ -1,10 +1,12 @@
-function Library() {
-  this.books = [];
-}
+class Library {
+  constructor() {
+    this.books = [];
+  }
 
-Library.prototype.addBook = function addBook(book) {
-  this.books.push(book);
-};
+  addBook(book) {
+    this.books.push(book);
+  }
+}
 
 const library = new Library();
 const addBook = document.querySelector(".add-book");
