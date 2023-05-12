@@ -74,24 +74,29 @@
           <ul>
             <li>
               <label for="title-input">Title</label>
-              <input type="text" name="title" id="title-input" />
+              <input type="text" name="title" id="title-input" required />
             </li>
             <li>
               <label for="author-input">Author</label>
-              <input type="text" name="author" id="author-input" />
+              <input type="text" name="author" id="author-input" required />
             </li>
             <li>
               <label for="pages-input">Pages</label>
-              <input type="text" name="pages" id="pages-input" />
+              <input type="text" name="pages" id="pages-input" required />
             </li>
             <li>
               <div class="checkbox-container">
                 <label for="read-input">Read?</label>
-                <input type="checkbox" name="read" id="read-input" />
+                <input type="checkbox" name="read" id="read-input" required />
               </div>
             </li>
             <li>
-              <input type="submit" value="Add Book" id="submit-button" />
+              <input
+                type="submit"
+                value="Add Book"
+                id="submit-button"
+                required
+              />
             </li>
           </ul>
         </form>
